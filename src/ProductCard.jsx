@@ -26,7 +26,7 @@ const ProductCard = ({ title, description, imageUrl, price }) => {
   };
 
   return (
-    <div className="max-w-md bg-white rounded-lg overflow-hidden shadow-lg m-4">
+    <div className="max-w-md  rounded-lg overflow-hidden shadow-lg m-4 bg-[#f6f6f0]">
       <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
       <div className="p-6">
         <h2 className="text-2xl font-bold mb-2 text-black">{title}</h2>
@@ -34,12 +34,10 @@ const ProductCard = ({ title, description, imageUrl, price }) => {
         <p className="text-black font-bold mt-2">${price}</p>
         <button
           onClick={addToCart}
-          className={`bg-${
-            isInCart ? "red" : "blue"
-          }-500 text-white px-4 py-2 rounded-md mt-2`}
-        >
-          {isInCart ? "Remove from Cart" : "Add to Cart"}
-        </button>
+  className={`text-${isInCart ? "red" : "black"}-500 py-2 rounded-md mt-2`}
+>
+  {isInCart ? "Remove from Cart" : "Add to Cart \u2192"}
+</button>
       </div>
     </div>
   );
