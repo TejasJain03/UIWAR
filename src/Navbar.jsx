@@ -1,8 +1,11 @@
-import { useEffect, useRef } from "react";
+import { useEffect, useRef, useState } from "react";
 import gsap from "gsap";
+import { useNavigate } from "react-router";
 
 export default function Navbar() {
   const navRef = useRef(null);
+  const navigate = useNavigate();
+  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {
     const tl = gsap.timeline();
@@ -12,28 +15,42 @@ export default function Navbar() {
     return () => tl.kill();
   }, []);
 
+  const handleMobileMenuToggle = () => {
+    setIsMobileMenuOpen((prev) => !prev);
+  };
+
   return (
     <nav
       ref={navRef}
-      className="flex items-center justify-between p-4   font-montserrat w-[100%]  bg-black text-[#f6f6f0]"
+      className="flex items-center justify-between p-4 font-montserrat w-full bg-black text-[#f6f6f0]"
     >
+      {/* Logo and Toggle Button */}
       <div className="flex items-center">
-        <div className="nav-link mr-4">
-          <a href="/about" className="text-xl">
+        <h1
+          className="nav-link text-2xl font-bold cursor-pointer"
+          onClick={() => navigate("/")}
+        >
+          LOGO
+        </h1>
+      </div>
+
+      {/* Navigation Links */}
+      <div
+        className={`hidden md:flex space-x-4 ${
+          isMobileMenuOpen ? "hidden" : ""
+        }`}
+      >
+        <div className="nav-link">
+          <a href="/about" className="text-lg">
             About
           </a>
         </div>
-        <div className="nav-link mr-4">
+        <div className="nav-link">
           <a href="/dashboard" className="text-lg">
             DashBoard
           </a>
         </div>
-      </div>
-
-      <h1 className="nav-link text-2xl font-bold">LOGO</h1>
-
-      <div className="flex items-center">
-        <div className="nav-link mr-4">
+        <div className="nav-link">
           <a href="/contactus" className="text-lg">
             Contact Us
           </a>
@@ -44,6 +61,39 @@ export default function Navbar() {
           </a>
         </div>
       </div>
+
+      {/* Mobile Navigation Toggle Button */}
+      <div className="md:hidden">
+        <button onClick={handleMobileMenuToggle} className="text-[#f6f6f0]">
+          ☰
+        </button>
+      </div>
+
+      {/* Mobile Navigation Menu */}
+      {isMobileMenuOpen && (
+        <div className="md:hidden absolute top-16 right-4 bg-black p-4 rounded">
+          <div className="nav-link mb-2">
+            <a href="/about" className="text-lg text-[#f6f6f0]">
+              About
+            </a>
+          </div>
+          <div className="nav-link mb-2">
+            <a href="/dashboard" className="text-lg text-[#f6f6f0]">
+              DashBoard
+            </a>
+          </div>
+          <div className="nav-link mb-2">
+            <a href="/contactus" className="text-lg text-[#f6f6f0]">
+              Contact Us
+            </a>
+          </div>
+          <div className="nav-link">
+            <a href="/login" className="text-lg text-[#f6f6f0]">
+              Login
+            </a>
+          </div>
+        </div>
+      )}
     </nav>
   );
 }

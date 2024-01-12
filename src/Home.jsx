@@ -25,16 +25,17 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-black w-full h-[100vh]  flex font-montserrat">
-        <div className="w-1/2 h-full bg-black text-[#f6f6f0] flex flex-col justify-center items-center">
-          <h2 className="text-4xl font-bold  mb-2 left-section-text">
+      <div className="bg-black w-full h-screen flex font-montserrat">
+        {/* Left Section */}
+        <div className="w-full md:w-1/2 h-full bg-black text-[#f6f6f0] flex flex-col justify-center items-center p-8">
+          <h2 className="text-4xl md:text-5xl font-bold mb-2 left-section-text">
             Luxury Watches
           </h2>
           <p className="text-[#666] mb-4 left-section-text">
             Discover the elegance of Kuzury Watches
           </p>
           <button
-            className="bg-[#f6f6f0] text-black border-2 border-black px-6 py-2 rounded-full hover:font-bold  left-section-text"
+            className="bg-[#f6f6f0] text-black border-2 border-black px-6 py-2 rounded-full hover:font-bold left-section-text"
             onClick={() => {
               navigate("/products");
             }}
@@ -43,7 +44,8 @@ export default function Home() {
           </button>
         </div>
 
-        <div className="w-1/2 h-full relative">
+        {/* Right Section (Image) - Hidden on smaller screens */}
+        <div className="hidden md:w-1/2 md:block relative">
           <img
             src="path/to/your/image.jpg"
             alt="Luxury Watches"
