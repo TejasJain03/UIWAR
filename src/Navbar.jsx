@@ -15,7 +15,7 @@ export default function Navbar() {
   return (
     <nav
       ref={navRef}
-      className="flex items-center justify-between p-4   font-montserrat w-[100%] font-bold bg-black text-[#f6f6f0]"
+      className="flex items-center justify-between p-4   font-montserrat w-[100%]  bg-black text-[#f6f6f0]"
     >
       <div className="flex items-center">
         <div className="nav-link mr-4">
@@ -25,17 +25,17 @@ export default function Navbar() {
         </div>
       </div>
 
-      <h1 className="nav-link text-2xl">LOGO</h1>
+      <h1 className="nav-link text-2xl font-bold">LOGO</h1>
 
       <div className="flex items-center">
         <div className="nav-link mr-4">
-          <a href="/contact" className="text-xl">
+          <a href="/contactus" className="text-lg">
             Contact Us
           </a>
         </div>
         <div className="nav-link">
-          <a href="/signup" className="text-xl">
-            Sign Up
+          <a href="/login" className="text-lg">
+            Login
           </a>
         </div>
       </div>

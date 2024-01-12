@@ -5,6 +5,7 @@ import Contactus from "./Contactus";
 import Dashboard from "./Dashboard";
 import Checkout from "./Checkout";
 import ProductPage from "./ProductPage";
+import Cart from "./Cart";
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Route path="/checkout" element={<Checkout />} />
         <Route path="/contactus" element={<Contactus />} />
         <Route path="/dashboard" element={<Dashboard />} />
+        <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<ProductPage />} />
       </Routes>
     </Router>
