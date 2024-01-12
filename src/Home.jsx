@@ -47,9 +47,9 @@ export default function Home() {
         {/* Right Section (Image) - Hidden on smaller screens */}
         <div className="hidden md:w-1/2 md:block relative">
           <img
-            src="path/to/your/image.jpg"
+            src="src/assets/homelogo.jpg"
             alt="Luxury Watches"
-            className="w-full h-full object-cover"
+            className="w-full h-full px-20 py-10 rounded-lg object-cover"
           />
         </div>
       </div>
