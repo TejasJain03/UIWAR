@@ -26,7 +26,7 @@ const ProductCard = ({ title, description, imageUrl, price }) => {
   };
 
   return (
-    <div className="max-w-md  rounded-lg overflow-hidden shadow-lg m-4 bg-[#f6f6f0]">
+    <div className="max-w-md bg-[#f6f6f0] rounded-lg overflow-hidden shadow-lg m-4 ">
       <img className="w-full h-48 object-cover" src={imageUrl} alt={title} />
       <div className="p-6">
         <h2 className="text-2xl font-bold mb-2 text-black">{title}</h2>

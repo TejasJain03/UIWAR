@@ -1,5 +1,6 @@
-import { useState } from "react";
-import Navbar from "./Navbar";
+import { useState, useEffect } from "react";
+import gsap from "gsap";
+import Navbar2 from "./Navbar2";
 import Footer from "./Footer";
 
 const Dashboard = () => {
@@ -27,15 +28,24 @@ const Dashboard = () => {
 
   const [favoriteBrands, setFavoriteBrands] = useState(["Brand A", "Brand B"]);
 
+  useEffect(() => {
+    gsap.from(".dashboard-item", {
+      opacity: 0,
+      y: 30,
+      stagger: 0.2,
+      duration: 1,
+      ease: "power3.out",
+    });
+  }, []);
+
   return (
     <>
-      <Navbar />
-      <div className="container mx-auto p-8">
+      <Navbar2 />
+      <div className="mx-auto p-8 bg-[#f6f6f0]">
         <h1 className="text-3xl font-bold mb-8">User Dashboard</h1>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-          {/* User Details */}
-          <div className="bg-white p-4 rounded-md shadow-md">
+        <div className="flex flex-col min-h-[70vh]">
+          <div className="bg-[#f6f6f0] p-4 rounded-md dashboard-item">
             <h2 className="text-xl font-bold mb-4">User Details</h2>
             <p>
               <strong>Username:</strong> {userDetails.username}
@@ -49,8 +59,8 @@ const Dashboard = () => {
           </div>
 
           {/* Order History */}
-          <div className="bg-white p-4 rounded-md shadow-md">
-            <h2 className="text-xl font-bold mb-4">Order History</h2>
+          <div className="bg-[#f6f6f0] p-4 rounded-md shadow-md dashboard-item">
+            <h2 className="text-xl font-bold mb-4 ">Order History</h2>
             <ul>
               {orderHistory.map((order) => (
                 <li key={order.orderNumber}>
@@ -70,7 +80,7 @@ const Dashboard = () => {
           </div>
 
           {/* Saved Addresses */}
-          <div className="bg-white p-4 rounded-md shadow-md">
+          <div className="bg-[#f6f6f0] p-4 rounded-md shadow-md dashboard-item">
             <h2 className="text-xl font-bold mb-4">Saved Addresses</h2>
             <ul>
               {savedAddresses.map((address, index) => (
@@ -80,7 +90,7 @@ const Dashboard = () => {
           </div>
 
           {/* Favorite Brands */}
-          <div className="bg-white p-4 rounded-md shadow-md">
+          <div className="bg-[#f6f6f0] p-4 rounded-md shadow-md dashboard-item">
             <h2 className="text-xl font-bold mb-4">Favorite Brands</h2>
             <ul>
               {favoriteBrands.map((brand, index) => (

@@ -1,79 +1,119 @@
+/* eslint-disable react/no-unescaped-entities */
+import { useNavigate } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 export default function Login() {
-    return <>
-       <div className="min-h-screen flex bg-[#f6f6f0]">
-      {/* Image Section */}
-      <div className="flex-1 ">
-        <img
-          src="src/assets/loginimage.jpg"
-          alt="Login"
-          className="w-full h-screen object-cover"
-        />
-      </div>
+  const navigate = useNavigate();
 
-      {/* Login Form Section */}
-      <div className="flex-1 flex items-center justify-center">
-        <div className="bg-[#f6f6f0] p-12 rounded shadow-md max-w-lg">
-          <h2 className="text-3xl font-semibold mb-6">Login</h2>
+  const handleLogin = (event) => {
+    event.preventDefault();
 
-          <form>
-            {/* Username input */}
-            <div className="mb-6 bg-[#f6f6f0]">
-              <label htmlFor="username" className="block text-gray-700 text-sm font-bold mb-2">
-                Username
-              </label>
-              <input
-                type="text"
-                id="username"
-                name="username"
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500"
-                placeholder="Your Username"
-              />
-            </div>
+    const username = event.target.elements.username.value;
+    const password = event.target.elements.password.value;
 
-            {/* Password input */}
-            <div className="mb-6 bg-[#f6f6f0]">
-              <label htmlFor="password" className="block text-gray-700 text-sm font-bold mb-2">
-                Password
-              </label>
-              <input
-                type="password"
-                id="password"
-                name="password"
-                className="w-full border border-gray-300 p-3 rounded focus:outline-none focus:border-blue-500"
-                placeholder="Your Password"
-              />
-            </div>
+    // Basic validation for username and password
+    if (username === 'Tejas123' && password === 'tejas123') {
+      // Successful login
+      toast.success('Login successful!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      // Redirect to dashboard or any other page
+      navigate('/dashboard');
+    } else {
+      // Failed login
+      toast.error('Invalid Credentials', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+  };
 
-            {/* Submit button */}
-            <div className="mb-8 text-center">
-              <button
-                type="submit"
-                className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
-              >
-                Log In
-              </button>
-            </div>
+  return (
+    <>
+      <div className="min-h-screen flex bg-[#f6f6f0]">
+        {/* Image Section */}
+        <div className="flex-1 ">
+          <img
+            src="src/assets/loginimage.jpg"
+            alt="Login"
+            className="w-full h-screen object-cover"
+          />
+        </div>
 
-            {/* Forgot password link */}
-            <div className="text-center mb-4">
-              <a href="#!" className="text-blue-500 hover:underline">
-                Forgot password?
-              </a>
-            </div>
+        {/* Login Form Section */}
+        <div className="flex-1 flex items-center justify-center">
+          <div className="bg-[#f6f6f0] p-12 rounded w-2/3  transition-all duration-300 ease-in-out">
+            <h2 className="text-3xl font-semibold mb-6 border-b-2 border-black pb-4">
+              Login
+            </h2>
 
-            {/* Register button */}
-            <div className="flex items-center justify-between">
-              <p className="mb-0">Don't have an account?</p>
-              <button
-                type="button"
-                className="text-blue-500 hover:underline focus:outline-none"
-              >
-                Register
-              </button>
-            </div>
-          </form>
+            <form onSubmit={handleLogin}>
+              {/* Username input */}
+              <div className="mb-6">
+                <label
+                  htmlFor="username"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Username
+                </label>
+                <input
+                  type="text"
+                  id="username"
+                  name="username"
+                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700 "
+                  placeholder="Your Username"
+                />
+              </div>
+
+              {/* Password input */}
+              <div className="mb-6">
+                <label
+                  htmlFor="password"
+                  className="block text-gray-700 text-sm font-bold mb-2"
+                >
+                  Password
+                </label>
+                <input
+                  type="password"
+                  id="password"
+                  name="password"
+                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700 "
+                  placeholder="Your Password"
+                />
+              </div>
+
+              {/* Submit button */}
+              <div className="mb-8 text-center">
+                <button
+                  type="submit"
+                  className="m-4 bg-black text-[#f6f6f0] border-2 border-[#f6f6f0] px-6 py-3 rounded-2xl transition duration-300 hover:bg-[#f6f6f0] hover:text-black hover:border-2 hover:border-black "
+                >
+                  Log In
+                </button>
+              </div>
+
+              {/* Forgot password link */}
+              <div className="text-center mb-4">
+                <a href="#!" className="text-blue-500 hover:underline">
+                  Forgot password?
+                </a>
+              </div>
+
+              {/* Register button */}
+              <div className="flex items-center justify-between">
+                <p className="mb-0">Don't have an account?</p>
+                <div
+                  onClick={() => navigate("/register")}
+                  className="text-blue-500 hover:underline focus:outline-none cursor-pointer"
+                >
+                  Register
+                </div>
+              </div>
+            </form>
+          </div>
         </div>
       </div>
-    </div>
-    </>;
+      <ToastContainer />
+    </>
+  );
 }
