@@ -56,6 +56,20 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch7.jpg",
       price: 160,
     },
+    {
+      title: "Luxury Watch 7",
+      description:
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      imageUrl: "/path/to/watch7.jpg",
+      price: 190,
+    },
+    {
+      title: "Luxury Watch 7",
+      description:
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      imageUrl: "/path/to/watch7.jpg",
+      price: 260,
+    },
   ];
 
   useEffect(() => {
