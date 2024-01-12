@@ -5,6 +5,7 @@ import gsap from "gsap";
 
 export default function Navbar() {
   const navRef = useRef(null);
+  const navigate=useNavigate()
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
 
   useEffect(() => {

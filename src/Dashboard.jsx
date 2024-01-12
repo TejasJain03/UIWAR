@@ -5,8 +5,8 @@ import Footer from "./Footer";
 
 const Dashboard = () => {
   const [userDetails, setUserDetails] = useState({
-    username: "JohnDoe",
-    email: "john.doe@example.com",
+    username: "Tejas Jain",
+    email: "tejasjain@example.com",
     address: "123 Luxury Street, Cityville",
   });
 

@@ -30,9 +30,9 @@ export default function Login() {
 
   return (
     <>
-      <div className="min-h-screen flex bg-[#f6f6f0]">
-        {/* Image Section */}
-        <div className="flex-1 ">
+      <div className="min-h-screen flex flex-col lg:flex-row bg-[#f6f6f0]">
+        {/* Image Section (Hidden on smaller screens) */}
+        <div className="hidden lg:flex lg:flex-1">
           <img
             src="src/assets/loginimage.jpg"
             alt="Login"
@@ -41,13 +41,13 @@ export default function Login() {
         </div>
 
         {/* Login Form Section */}
-        <div className="flex-1 flex items-center justify-center">
-          <div className="bg-[#f6f6f0] p-12 rounded w-2/3  transition-all duration-300 ease-in-out">
+        <div className="lg:flex-1 flex items-center justify-center">
+          <div className="bg-[#f6f6f0] p-6 lg:p-12 rounded w-full lg:w-2/3 transition-all duration-300 ease-in-out">
             <h2 className="text-3xl font-semibold mb-6 border-b-2 border-black pb-4">
               Login
             </h2>
 
-            <form onSubmit={handleLogin}>
+            <form onSubmit={handleLogin} className="max-w-md mx-auto">
               {/* Username input */}
               <div className="mb-6">
                 <label
@@ -60,7 +60,7 @@ export default function Login() {
                   type="text"
                   id="username"
                   name="username"
-                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700 "
+                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700"
                   placeholder="Your Username"
                 />
               </div>
@@ -77,7 +77,7 @@ export default function Login() {
                   type="password"
                   id="password"
                   name="password"
-                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700 "
+                  className="w-full border border-gray-300 bg-[#f6f6f0] p-3 rounded focus:outline-none focus:border-blue-500 transition-all duration-300 ease-in-out hover:border-blue-700"
                   placeholder="Your Password"
                 />
               </div>
@@ -86,7 +86,7 @@ export default function Login() {
               <div className="mb-8 text-center">
                 <button
                   type="submit"
-                  className="m-4 bg-black text-[#f6f6f0] border-2 border-[#f6f6f0] px-6 py-3 rounded-2xl transition duration-300 hover:bg-[#f6f6f0] hover:text-black hover:border-2 hover:border-black "
+                  className="m-4 bg-black text-[#f6f6f0] border-2 border-[#f6f6f0] px-6 py-3 rounded-2xl transition duration-300 hover:bg-[#f6f6f0] hover:text-black hover:border-2 hover:border-black"
                 >
                   Log In
                 </button>

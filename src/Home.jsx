@@ -20,6 +20,7 @@ export default function Home() {
       duration: 0.6,
     });
     tl.from(".home__title", { opacity: 0, y: -50, duration: 1 });
+    tl.from(".home__image", { opacity: 0, scale: 0.8, duration: 1 }, "-=0.5"); // Added animation for the image
   }, []);
 
   return (
@@ -29,7 +30,7 @@ export default function Home() {
         {/* Left Section */}
         <div className="w-full md:w-1/2 h-full bg-black text-[#f6f6f0] flex flex-col justify-center items-center p-8">
           <h2 className="text-4xl md:text-5xl font-bold mb-2 left-section-text">
-            Luxury Watches
+            Luxury in Motion
           </h2>
           <p className="text-[#666] mb-4 left-section-text">
             Discover the elegance of Kuzury Watches
@@ -45,7 +46,7 @@ export default function Home() {
         </div>
 
         {/* Right Section (Image) - Hidden on smaller screens */}
-        <div className="hidden md:w-1/2 md:block relative">
+        <div className="hidden md:w-1/2 md:block relative home__image">
           <img
             src="src/assets/homelogo.jpg"
             alt="Luxury Watches"

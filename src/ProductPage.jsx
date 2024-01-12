@@ -11,154 +11,77 @@ const ProductPage = () => {
   const navigate = useNavigate();
 
   const productData = [
-    // Your product data here...
     {
-      title: "Luxury Watch 1",
+      title: "Rolex Submariner",
       description:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "Iconic diving watch with precision engineering and timeless design.",
       imageUrl: "src/assets/watch1.jpg",
-      price: 100,
+      price: 5000,
     },
     {
-      title: "Luxury Watch 2",
+      title: "Omega Speedmaster",
       description:
-        "Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.",
+        "Legendary chronograph worn on the moon during Apollo missions.",
       imageUrl: "src/assets/watch2.jpg",
-      price: 120,
+      price: 6000,
     },
     {
-      title: "Luxury Watch 3",
+      title: "Patek Philippe Calatrava",
       description:
-        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+        "Elegant dress watch known for its understated beauty and craftsmanship.",
       imageUrl: "src/assets/watch3.jpg",
-      price: 200,
+      price: 12000,
     },
     {
-      title: "Luxury Watch 4",
+      title: "Audemars Piguet Royal Oak",
       description:
-        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+        "Revolutionary luxury sports watch featuring an octagonal bezel.",
       imageUrl: "src/assets/watch4.jpg",
-      price: 180,
+      price: 15000,
     },
     {
-      title: "Luxury Watch 5",
+      title: "IWC Portugieser",
       description:
-        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+        "Classic and versatile timepiece with a simple and clean design.",
       imageUrl: "src/assets/watch5.jpg",
-      price: 130,
+      price: 8000,
     },
     {
-      title: "Luxury Watch 6",
+      title: "Jaeger-LeCoultre Reverso",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Art Deco-inspired reversible watch with a unique flip case.",
       imageUrl: "src/assets/watch6.jpg",
-      price: 160,
+      price: 10000,
     },
     {
-      title: "Luxury Watch 7",
+      title: "Hublot Big Bang",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Bold and contemporary watch known for its distinctive fusion design.",
       imageUrl: "src/assets/watch7.jpg",
-      price: 190,
+      price: 20000,
     },
     {
-      title: "Luxury Watch 8",
+      title: "Cartier Santos",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Historic aviator watch with a square case and exposed screws.",
       imageUrl: "src/assets/watch8.jpg",
-      price: 260,
+      price: 18000,
     },
     {
-      title: "Luxury Watch 9",
+      title: "Panerai Luminor",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Robust and durable military-inspired watch with a distinctive crown guard.",
       imageUrl: "src/assets/watch9.jpg",
-      price: 260,
+      price: 14000,
     },
     {
-      title: "Luxury Watch 10",
+      title: "Breitling Navitimer",
       description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+        "Iconic pilot's watch with a slide rule bezel for aviation calculations.",
       imageUrl: "src/assets/watch10.jpg",
-      price: 260,
+      price: 16000,
     },
-    {
-      title: "Luxury Watch 11",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch11.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 12",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch12.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 13",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch13.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 14",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch14.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 15",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch15.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 16",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch16.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 17",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch17.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 18",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch18.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 19",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch19.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 20",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch20.jpg",
-      price: 260,
-    },
-    {
-      title: "Luxury Watch 21",
-      description:
-        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
-      imageUrl: "src/assets/watch21.jpg",
-      price: 260,
-    },
+    // Add more watches as needed...
   ];
 
   const sortedProductData = [...productData].sort((a, b) => {
@@ -243,11 +166,12 @@ const ProductPage = () => {
           ))}
         </div>
       </div>
-      <div>
+      <div className="text-center bg-[#f6f6f0]">
         <button
           onClick={() => {
             navigate("/cart");
           }}
+          className="bg-black text-white px-6 py-3 rounded-full hover:bg-gray-800 transition duration-300"
         >
           Go to Cart
         </button>
