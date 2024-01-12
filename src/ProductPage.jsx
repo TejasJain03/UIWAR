@@ -24,9 +24,7 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch2.jpg",
       price: 120,
     },
-<<<<<<< HEAD
-    // Add more product data...
-=======
+
     {
       title: "Luxury Watch 4",
       description:
@@ -69,7 +67,6 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch7.jpg",
       price: 260,
     },
->>>>>>> 8a3071de99b7f0cf6588f15f9a1e239309696c7d
   ];
 
   const sortedProductData = [...productData].sort((a, b) => {
