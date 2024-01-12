@@ -1,22 +1,56 @@
-import { useEffect, useRef } from "react";
+import { useEffect } from "react";
 import gsap from "gsap";
-import { Power1 } from "gsap/all"; // Import necessary plugins
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+import Navbar from "./Navbar";
+import { useNavigate } from "react-router-dom";
 
-gsap.registerPlugin(Power1); // Register the plugins
+gsap.registerPlugin(ScrollTrigger);
 
 export default function Home() {
-  const homeTitleRef = useRef(null);
+  const navigate = useNavigate();
 
   useEffect(() => {
+    // Animation using GSAP
     const tl = gsap.timeline({ defaults: { ease: "power1.out" } });
-    tl.from(homeTitleRef.current, { opacity: 0, y: -50, duration: 1 });
+
+    tl.from(".left-section-text", {
+      opacity: 0,
+      x: -50,
+      stagger: 0.2,
+      duration: 0.6,
+    });
+    tl.from(".home__title", { opacity: 0, y: -50, duration: 1 });
   }, []);
 
   return (
-    <div className="home">
-      <h1 className="bg-red-600 text-black" ref={homeTitleRef}>
-        Home
-      </h1>
-    </div>
+    <>
+      <Navbar />
+      <div className="bg-black w-full h-[100vh] flex font-montserrat">
+        <div className="w-1/2 h-full bg-black text-[#f6f6f0] flex flex-col justify-center items-center">
+          <h2 className="text-4xl font-bold  mb-2 left-section-text">
+            Luxury Watches
+          </h2>
+          <p className="text-[#666] mb-4 left-section-text">
+            Discover the elegance of Kuzury Watches
+          </p>
+          <button
+            className="bg-[#f6f6f0] text-black border-2 border-black px-6 py-2 rounded-full hover:font-bold  left-section-text"
+            onClick={() => {
+              navigate("/products");
+            }}
+          >
+            Explore
+          </button>
+        </div>
+
+        <div className="w-1/2 h-full relative">
+          <img
+            src="path/to/your/image.jpg"
+            alt="Luxury Watches"
+            className="w-full h-full object-cover"
+          />
+        </div>
+      </div>
+    </>
   );
 }
