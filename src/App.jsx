@@ -7,8 +7,6 @@ import Checkout from "./Checkout";
 import ProductPage from "./ProductPage";
 import Cart from "./Cart";
 import Login from "./Login";
-
-
 function App() {
   return (
     <Router>

@@ -1,7 +1,33 @@
+/* eslint-disable react/no-unescaped-entities */
 import { useNavigate } from "react-router";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
 
 export default function Login() {
   const navigate = useNavigate();
+
+  const handleLogin = (event) => {
+    event.preventDefault();
+
+    const username = event.target.elements.username.value;
+    const password = event.target.elements.password.value;
+
+    // Basic validation for username and password
+    if (username === 'Tejas123' && password === 'tejas123') {
+      // Successful login
+      toast.success('Login successful!', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+      // Redirect to dashboard or any other page
+      navigate('/dashboard');
+    } else {
+      // Failed login
+      toast.error('Invalid Credentials', {
+        position: toast.POSITION.TOP_CENTER,
+      });
+    }
+  };
+
   return (
     <>
       <div className="min-h-screen flex bg-[#f6f6f0]">
@@ -21,7 +47,7 @@ export default function Login() {
               Login
             </h2>
 
-            <form>
+            <form onSubmit={handleLogin}>
               {/* Username input */}
               <div className="mb-6">
                 <label
@@ -87,6 +113,7 @@ export default function Login() {
           </div>
         </div>
       </div>
+      <ToastContainer />
     </>
   );
 }

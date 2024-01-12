@@ -34,12 +34,10 @@ const ProductCard = ({ title, description, imageUrl, price }) => {
         <p className="text-black font-bold mt-2">${price}</p>
         <button
           onClick={addToCart}
-          className={`bg-${
-            isInCart ? "red" : "blue"
-          }-500 text-white px-4 py-2 rounded-md mt-2`}
-        >
-          {isInCart ? "Remove from Cart" : "Add to Cart"}
-        </button>
+  className={`text-${isInCart ? "red" : "black"}-500 py-2 rounded-md mt-2`}
+>
+  {isInCart ? "Remove from Cart" : "Add to Cart \u2192"}
+</button>
       </div>
     </div>
   );
