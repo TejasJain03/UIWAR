@@ -41,7 +41,7 @@ export default function Navbar() {
           navigate("/");
         }}
       >
-        LOGO
+        Hemisphere
       </h1>
 
       {/* Navigation Links - Right Section */}

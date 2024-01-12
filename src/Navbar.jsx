@@ -30,7 +30,7 @@ export default function Navbar() {
           className="nav-link text-2xl font-bold cursor-pointer"
           onClick={() => navigate("/")}
         >
-          LOGO
+          Hemisphere
         </h1>
       </div>
 
