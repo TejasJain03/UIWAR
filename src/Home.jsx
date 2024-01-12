@@ -25,7 +25,7 @@ export default function Home() {
   return (
     <>
       <Navbar />
-      <div className="bg-black w-full h-[100vh] flex font-montserrat">
+      <div className="bg-black w-full h-[95vh] flex font-montserrat">
         <div className="w-1/2 h-full bg-black text-[#f6f6f0] flex flex-col justify-center items-center">
           <h2 className="text-4xl font-bold  mb-2 left-section-text">
             Luxury Watches
