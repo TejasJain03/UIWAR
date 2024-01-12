@@ -103,7 +103,7 @@ export default function Login() {
               <div className="flex items-center justify-between">
                 <p className="mb-0">Don't have an account?</p>
                 <div
-                  onClick={() => navigate("/register")}
+                  onClick={() => navigate("/Signup")}
                   className="text-blue-500 hover:underline focus:outline-none cursor-pointer"
                 >
                   Register
