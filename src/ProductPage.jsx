@@ -3,10 +3,12 @@ import gsap from "gsap";
 import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import { useNavigate } from "react-router";
 const ProductPage = () => {
   const productPageRef = useRef(null);
   const [sortByPrice, setSortByPrice] = useState("asc");
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const navigate = useNavigate();
 
   const productData = [
     // Your product data here...
@@ -24,9 +26,6 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch2.jpg",
       price: 120,
     },
-<<<<<<< HEAD
-    // Add more product data...
-=======
     {
       title: "Luxury Watch 4",
       description:
@@ -69,7 +68,6 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch7.jpg",
       price: 260,
     },
->>>>>>> 8a3071de99b7f0cf6588f15f9a1e239309696c7d
   ];
 
   const sortedProductData = [...productData].sort((a, b) => {
@@ -153,6 +151,11 @@ const ProductPage = () => {
             />
           ))}
         </div>
+      </div>
+      <div>
+        <button onClick={()=>{
+            navigate('/cart')
+        }}>Go to Cart</button>
       </div>
       <Footer />
     </>
