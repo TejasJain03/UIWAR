@@ -3,6 +3,7 @@ import gsap from "gsap";
 import ProductCard from "./ProductCard";
 import Navbar from "./Navbar";
 import Footer from "./Footer";
+import Navbar2 from "./Navbar2";
 import { useNavigate } from "react-router";
 const ProductPage = () => {
   const productPageRef = useRef(null);
@@ -84,7 +85,7 @@ const ProductPage = () => {
 
     gsap.from(".product-card", {
       opacity: 0,
-      y: 50,
+      y: -10,
       stagger: 0.2,
       duration: 1,
       scrollTrigger: {
@@ -96,16 +97,16 @@ const ProductPage = () => {
 
   return (
     <>
-      <Navbar />
+      <Navbar2 />
       <div
         ref={productPageRef}
-        className="flex flex-wrap justify-center p-4 bg-f6f6f0"
+        className="flex flex-wrap justify-center p-4 bg-[#f6f6f0]"
       >
         <div className="relative inline-block text-left">
           <button
             type="button"
             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-            className="inline-flex justify-center w-full rounded-md border border-gray-300 shadow-sm px-4 py-2 bg-white text-sm font-medium text-gray-700 hover:bg-gray-50 focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500"
+            className="inline-flex justify-center w-full rounded-md border border-black shadow-sm px-4 py-2 bg-[#f6f6f0] text-sm font-medium text-black "
           >
             Sort By Price
           </button>
@@ -153,9 +154,13 @@ const ProductPage = () => {
         </div>
       </div>
       <div>
-        <button onClick={()=>{
-            navigate('/cart')
-        }}>Go to Cart</button>
+        <button
+          onClick={() => {
+            navigate("/cart");
+          }}
+        >
+          Go to Cart
+        </button>
       </div>
       <Footer />
     </>
