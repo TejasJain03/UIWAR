@@ -1,3 +1,70 @@
 export default function Contactus() {
-    return <></>;
+    return <>
+        <div className="min-h-screen flex items-center justify-center relative">
+      {/* Background Div with Blur */}
+      <div
+        className="absolute inset-0 bg-cover bg-center blur"
+        style={{ backgroundImage: `url('src/assets/contactus.jpg')` }}
+      ></div>
+
+      {/* Contact Us Form */}
+      <div className="bg-white p-8 rounded shadow-md max-w-md relative z-10">
+        <h2 className="text-3xl font-semibold mb-6 text-gray-800">Contact Us</h2>
+
+        <form>
+          {/* Name input */}
+          <div className="mb-4">
+            <label htmlFor="name" className="block text-gray-700 text-sm font-bold mb-2">
+              Your Name
+            </label>
+            <input
+              type="text"
+              id="name"
+              name="name"
+              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
+              placeholder="Your Name"
+            />
+          </div>
+
+          {/* Email input */}
+          <div className="mb-4">
+            <label htmlFor="email" className="block text-gray-700 text-sm font-bold mb-2">
+              Your Email
+            </label>
+            <input
+              type="email"
+              id="email"
+              name="email"
+              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
+              placeholder="Your Email"
+            />
+          </div>
+
+          {/* Message textarea */}
+          <div className="mb-6">
+            <label htmlFor="message" className="block text-gray-700 text-sm font-bold mb-2">
+              Your Message
+            </label>
+            <textarea
+              id="message"
+              name="message"
+              rows="4"
+              className="w-full border border-gray-300 p-2 rounded focus:outline-none focus:border-blue-500"
+              placeholder="Write your message here"
+            ></textarea>
+          </div>
+
+          {/* Submit button */}
+          <div className="text-center">
+            <button
+              type="submit"
+              className="bg-blue-500 text-white px-6 py-3 rounded hover:bg-blue-700 focus:outline-none focus:shadow-outline-blue"
+            >
+              Send Message
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+    </>;
 }

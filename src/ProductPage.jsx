@@ -24,7 +24,52 @@ const ProductPage = () => {
       imageUrl: "/path/to/watch2.jpg",
       price: 120,
     },
+<<<<<<< HEAD
     // Add more product data...
+=======
+    {
+      title: "Luxury Watch 4",
+      description:
+        "Duis aute irure dolor in reprehenderit in voluptate velit esse cillum.",
+      imageUrl: "/path/to/watch4.jpg",
+      price: 200,
+    },
+    {
+      title: "Luxury Watch 5",
+      description:
+        "Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia.",
+      imageUrl: "/path/to/watch5.jpg",
+      price: 180,
+    },
+    {
+      title: "Luxury Watch 6",
+      description:
+        "Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit.",
+      imageUrl: "/path/to/watch6.jpg",
+      price: 130,
+    },
+    {
+      title: "Luxury Watch 7",
+      description:
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      imageUrl: "/path/to/watch7.jpg",
+      price: 160,
+    },
+    {
+      title: "Luxury Watch 7",
+      description:
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      imageUrl: "/path/to/watch7.jpg",
+      price: 190,
+    },
+    {
+      title: "Luxury Watch 7",
+      description:
+        "Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet.",
+      imageUrl: "/path/to/watch7.jpg",
+      price: 260,
+    },
+>>>>>>> 8a3071de99b7f0cf6588f15f9a1e239309696c7d
   ];
 
   const sortedProductData = [...productData].sort((a, b) => {

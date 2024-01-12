@@ -5,7 +5,12 @@ import Contactus from "./Contactus";
 import Dashboard from "./Dashboard";
 import Checkout from "./Checkout";
 import ProductPage from "./ProductPage";
+<<<<<<< HEAD
 import Cart from "./Cart";
+=======
+import Login from "./Login";
+
+>>>>>>> 8a3071de99b7f0cf6588f15f9a1e239309696c7d
 
 function App() {
   return (
@@ -17,6 +22,7 @@ function App() {
         <Route path="/dashboard" element={<Dashboard />} />
         <Route path="/cart" element={<Cart />} />
         <Route path="/products" element={<ProductPage />} />
+        <Route path="/login" element={<Login />} />
       </Routes>
     </Router>
   );
