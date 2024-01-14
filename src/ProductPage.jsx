@@ -15,70 +15,70 @@ const ProductPage = () => {
       title: "Rolex Submariner",
       description:
         "Iconic diving watch with precision engineering and timeless design.",
-      imageUrl: "src/assets/watch1.jpg",
+      imageUrl: "src/images/watch1.jpg",
       price: 5000,
     },
     {
       title: "Omega Speedmaster",
       description:
         "Legendary chronograph worn on the moon during Apollo missions.",
-      imageUrl: "src/assets/watch2.jpg",
+      imageUrl: "src/images/watch2.jpg",
       price: 6000,
     },
     {
       title: "Patek Philippe Calatrava",
       description:
         "Elegant dress watch known for its understated beauty and craftsmanship.",
-      imageUrl: "src/assets/watch3.jpg",
+      imageUrl: "src/images/watch3.jpg",
       price: 12000,
     },
     {
       title: "Audemars Piguet Royal Oak",
       description:
         "Revolutionary luxury sports watch featuring an octagonal bezel.",
-      imageUrl: "src/assets/watch4.jpg",
+      imageUrl: "src/images/watch4.jpg",
       price: 15000,
     },
     {
       title: "IWC Portugieser",
       description:
         "Classic and versatile timepiece with a simple and clean design.",
-      imageUrl: "src/assets/watch5.jpg",
+      imageUrl: "src/images/watch5.jpg",
       price: 8000,
     },
     {
       title: "Jaeger-LeCoultre Reverso",
       description:
         "Art Deco-inspired reversible watch with a unique flip case.",
-      imageUrl: "src/assets/watch6.jpg",
+      imageUrl: "src/images/watch6.jpg",
       price: 10000,
     },
     {
       title: "Hublot Big Bang",
       description:
         "Bold and contemporary watch known for its distinctive fusion design.",
-      imageUrl: "src/assets/watch7.jpg",
+      imageUrl: "src/images/watch7.jpg",
       price: 20000,
     },
     {
       title: "Cartier Santos",
       description:
         "Historic aviator watch with a square case and exposed screws.",
-      imageUrl: "src/assets/watch8.jpg",
+      imageUrl: "src/images/watch8.jpg",
       price: 18000,
     },
     {
       title: "Panerai Luminor",
       description:
         "Robust and durable military-inspired watch with a distinctive crown guard.",
-      imageUrl: "src/assets/watch9.jpg",
+      imageUrl: "src/images/watch9.jpg",
       price: 14000,
     },
     {
       title: "Breitling Navitimer",
       description:
         "Iconic pilot's watch with a slide rule bezel for aviation calculations.",
-      imageUrl: "src/assets/watch10.jpg",
+      imageUrl: "src/images/watch10.jpg",
       price: 16000,
     },
     // Add more watches as needed...

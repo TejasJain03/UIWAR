@@ -26,7 +26,7 @@ export default function About() {
 
       {/* Embedded Video */}
       <video width="100%" height="auto" muted autoPlay>
-        <source src="src/assets/video.mp4" type="video/mp4" />
+        <source src="src/images/video.mp4" type="video/mp4" />
         Your browser does not support the video tag.
       </video>
     </div>

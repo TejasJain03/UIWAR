@@ -34,7 +34,7 @@ export default function Signup() {
         {/* Image Section (Hidden on smaller screens) */}
         <div className="hidden lg:block lg:flex-1">
           <img
-            src="src/assets/signup.jpg"
+            src="src/images/signup.jpg"
             alt="Signup"
             className="w-full h-screen object-cover"
           />

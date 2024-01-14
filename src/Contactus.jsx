@@ -5,7 +5,7 @@ export default function Contactus() {
         {/* Background Div with Blur */}
         <div
           className="absolute inset-0 bg-cover bg-center blur"
-          style={{ backgroundImage: `url('src/assets/contactus.jpg')` }}
+          style={{ backgroundImage: `url('src/images/contactus.jpg')` }}
         ></div>
 
         {/* Contact Us Form */}

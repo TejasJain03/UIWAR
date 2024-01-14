@@ -34,7 +34,7 @@ export default function Login() {
         {/* Image Section (Hidden on smaller screens) */}
         <div className="hidden lg:flex lg:flex-1">
           <img
-            src="src/assets/loginimage.jpg"
+            src="src/images/loginimage.jpg"
             alt="Login"
             className="w-full h-screen object-cover"
           />
